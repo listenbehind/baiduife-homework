@@ -58,10 +58,14 @@ st->com->cond
 cond(yes)->e
 cond(no)->com
 &```
+[^脚注]:http://ife.baidu.com/course/detail/id/28
 ```
 <font color=red size=2>相关链接</font>  
 [markdown语法](https://www.appinn.com/markdown/)
+
 [markdown基本语法](https://www.jianshu.com/p/191d1e21f7ed)
+
+[^1]:http://ife.baidu.com/course/detail/id/28
 
 
 
