@@ -19,52 +19,44 @@ http-equiv ,name, scheme 是meta 可选的属性。（HTML5 不支持 scheme 属
 语法格式：
 `<meta http-equiv="参数" content="参数变量值">`
 参数：
-**content-Type 描述文档类型，字符集**
+**content-Type 描述文档类型，字符集**  
 `<meta http-equiv="expires" content="text/html; chartset=utf-8">`
->meta标签的charset的信息参数如GB2312时，代表说明网站是采用的编码是简体中文；
->meta标签的charset的信息参数如BIG5时，代表说明网站是采用的编码是繁体中文；
->meta标签的charset的信息参数如iso-2022-jp时，代表说明网站是采用的编码是日文；
->meta标签的charset的信息参数如ks_c_5601时，代表说明网站是采用的编码是韩文；
->meta标签的charset的信息参数如ISO-8859-1时，代表说明网站是采用的编码是英文；
->meta标签的charset的信息参数如UTF-8时，代表世界通用的语言编码；
->在 HTML5 中，有一个新的 charset 属性，它使字符集的定义更加容易：
+>meta标签的charset的信息参数如GB2312时，代表说明网站是采用的编码是简体中文;  
+>meta标签的charset的信息参数如BIG5时，代表说明网站是采用的编码是繁体中文;  
+>meta标签的charset的信息参数如iso-2022-jp时，代表说明网站是采用的编码是日文;  
+>meta标签的charset的信息参数如ks_c_5601时，代表说明网站是采用的编码是韩文;  
+>meta标签的charset的信息参数如ISO-8859-1时，代表说明网站是采用的编码是英文;  
+>meta标签的charset的信息参数如UTF-8时，代表世界通用的语言编码; 
 
-**<meta charset="UTF-8">**
-default-style规定要使用的预定义的样式表
+**在 HTML5 中，有一个新的 charset 属性，它使字符集的定义更加容易;**
+`<meta charset="UTF-8">`
 
-**<meta http-equiv="default-style" content="the document's preferred stylesheet">**
-其中content 属性的值必须匹配同一文档中的一个 link 元素上的 title 属性的值，或者必须匹配同一文档中的一个 style 元素上的 title 属性的值
-expires 可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输（必须使用GMT的时间格式）
+**default-style规定要使用的预定义的样式表**
+`<meta http-equiv="default-style" content="the document's preferred stylesheet">`
 
-<meta http-equiv="expires" content="Wed, 20-Jun-2017 22:30:00 GTM">(必须使用GMT时间格式)
+**其中content 属性的值必须匹配同一文档中的一个 link 元素上的 title 属性的值，或者必须匹配同一文档中的一个 style 元素上的 title 属性的**
+**expires 可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输（必须使用GMT的时间格式)**
+`<meta http-equiv="expires" content="Wed, 20-Jun-2017 22:30:00 GTM">(必须使用GMT时间格式)`
 
-Refresh 自动刷新并指向新页面
+**Refresh 自动刷新并指向新页面**
+`<meta http-equiv="Refresh" content="2;URL=http://www.baidu.com/"> 表示2秒后跳到百度页面`
 
-<meta http-equiv="Refresh" content="2;URL=http://www.baidu.com/"> 表示2秒后跳到百度页面
+**值 "refresh" 应该慎重使用，因为它会使得页面不受用户控制。在 W3C's Web 内容可访问性指南 中使用 "refresh" 会到导致失败。**
+**Set-Cookie cookie设定，如果网页过期，那么存盘的cookie将被删除**
+`<meta http-equiv="Set-Cookie" content="cookievalue=xxx;expires=Wednesday,20-Jun-2017 22:30:00 GTM;path=/ ">(必须使用GMT时间格式)`
 
-值 "refresh" 应该慎重使用，因为它会使得页面不受用户控制。在 W3C's Web 内容可访问性指南 中使用 "refresh" 会到导致失败。
+**Pragma是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出**
+`<meta http-equiv="Pragma" content="no-cache">访问者不能脱机浏览此网页`
 
-Set-Cookie cookie设定，如果网页过期，那么存盘的cookie将被删除
+**Window-target 显示窗口的设定，强制页面在当前窗口以独立页面显示**
+`<meta http-equive="Window-target" content="_top"> 用来防止别人在框架中调用此页面`
 
-<meta http-equiv="Set-Cookie" content="cookievalue=xxx;expires=Wednesday,20-Jun-2017 22:30:00 GTM;path=/ ">(必须使用GMT时间格式)
+**Page-Enter 和Page-Exit设定进入/离开页面时的特殊效果**
+**duration的值为网页动态过渡的时间，单位为秒。**
+**transition是过渡方式，它的值为0到23，分别对应24种过渡方式：**
+`<meta http-equiv="Page-Enter" content="revealTrans(duration=1.0,transtion=12)">`
+`<meta http-equiv="Page-Exit" content="revealTrans(duration=1.0,transtion=12)">`
 
-Pragma是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出
-
-<meta http-equiv="Pragma" content="no-cache">访问者不能脱机浏览此网页
-
-Window-target 显示窗口的设定，强制页面在当前窗口以独立页面显示
-
-<meta http-equive="Window-target" content="_top"> 用来防止别人在框架中调用此页面
-
-Page-Enter 和Page-Exit设定进入/离开页面时的特殊效果
-
-<meta http-equiv="Page-Enter" content="revealTrans(duration=1.0,transtion=12)">
-
-<meta http-equiv="Page-Exit" content="revealTrans(duration=1.0,transtion=12)">
-
-duration的值为网页动态过渡的时间，单位为秒。
-
-transition是过渡方式，它的值为0到23，分别对应24种过渡方式：
 
 | 值 | 过渡方式 | 值 | 过渡方式 |
 | :--: | :------------------: | :--: | :------------------: |
