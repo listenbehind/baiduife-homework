@@ -170,10 +170,10 @@ application-name定义固定网站应用程序实例的名称。
 
 **光标悬停在 Windows 任务栏的固定网站按钮上时，此名称将出现在工具提示中。该应用程序名称还将附加到固定网站应用程序实例的窗口标题中。**
 
-```各浏览器meta
+各浏览器meta
 
-Microsoft Internet Explorer
-<!-- 优先使用最新的ie版本 -->
+- Microsoft Internet Explorer
+```<!-- 优先使用最新的ie版本 -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 <!-- 是否开启cleartype显示效果 -->
@@ -188,19 +188,22 @@ Microsoft Internet Explorer
 
 <!-- IE 11 / Windows 9.1 -->
 <meta name="msapplication-config" content="ieconfig.xml">
-Google Chrome
+```
+- Google Chrome
 
-<!-- 优先使用最新的chrome版本 -->
+```<!-- 优先使用最新的chrome版本 -->
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 <!-- 禁止自动翻译 -->
 <meta name="google" value="notranslate">
-360浏览器
+```
+- 360浏览器
 
-<!-- 选择使用的浏览器解析内核 -->
+```<!-- 选择使用的浏览器解析内核 -->
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
-UC手机浏览器
+```
+- UC手机浏览器
 
-<!-- 将屏幕锁定在特定的方向 -->
+```<!-- 将屏幕锁定在特定的方向 -->
 <meta name="screen-orientation" content="landscape/portrait">
 <!-- 全屏显示页面 -->
 <meta name="full-screen" content="yes">
@@ -214,17 +217,19 @@ UC手机浏览器
 <meta name="layoutmode" content="fitscreen">
 <!-- 当页面有太多文字时禁止缩放 -->
 <meta name="wap-font-scale" content="no">
-QQ手机浏览器
+```
+- QQ手机浏览器
 
-<!-- 锁定屏幕在特定方向 -->
+```<!-- 锁定屏幕在特定方向 -->
 <meta name="x5-orientation" content="landscape/portrait">
 <!-- 全屏显示 -->
 <meta name="x5-fullscreen" content="true">
 <!-- 页面将以应用模式显示 -->
 <meta name="x5-page-mode" content="app">
-Apple iOS
+```
+- Apple iOS
 
-<!-- Smart App Banner -->
+```<!-- Smart App Banner -->
 <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
 
 <!-- 禁止自动探测并格式化手机号码 -->
@@ -237,15 +242,17 @@ Apple iOS
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <!-- 添加到主屏后的标题 -->
 <meta name="apple-mobile-web-app-title" content="App Title">
-Google Android
+```
+- Google Android
 
-<meta name="theme-color" content="#E64545">
+```<meta name="theme-color" content="#E64545">
 <!-- 添加到主屏 -->
 <meta name="mobile-web-app-capable" content="yes">
 <!-- More info: https://developer.chrome.com/multidevice/android/installtohomescreen -->
-App Links
+```
+- App Links
 
-<!-- iOS -->
+```<!-- iOS -->
 <meta property="al:ios:url" content="applinks://docs">
 <meta property="al:ios:app_store_id" content="12345">
 <meta property="al:ios:app_name" content="App Links">
@@ -256,9 +263,10 @@ App Links
 <!-- Web Fallback -->
 <meta property="al:web:url" content="http://applinks.org/documentation">
 <!-- More info: http://applinks.org/documentation/ -->
-常用的移动端meta
+```
+- 常用的移动端meta
 
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+```<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection"content="telephone=no, email=no" />
