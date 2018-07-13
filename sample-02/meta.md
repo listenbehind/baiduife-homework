@@ -12,40 +12,28 @@
 content 是meta必须的属性，定义与 http-equiv 或 name 属性相关的元信息。
 http-equiv ,name, scheme 是meta 可选的属性。（HTML5 不支持 scheme 属性）
 
-​
-
 #### http-equiv属性：
-
 为名称/值对提供了名称。并指示服务器在发送实际的文档之前先在要传送给浏览器的 MIME 文档头部包含名称/值对。
-
 当服务器向浏览器发送文档时，会先发送许多名称/值对。虽然有些服务器会发送许多这种名称/值对，但是所有服务器都至少要发送一个：content-type:text/html。这将告诉浏览器准备接受一个 HTML 文档。
-
-使用带有 http-equiv 属性的 <meta> 标签时，服务器将把名称/值对添加到发送给浏览器的内容头部。
-
-语法格式：<meta http-equiv="参数" content="参数变量值">
-
+使用带有 http-equiv 属性的 **<meta>** 标签时，服务器将把名称/值对添加到发送给浏览器的内容头部。
+语法格式：
+`<meta http-equiv="参数" content="参数变量值">`
 参数：
+**content-Type 描述文档类型，字符集**
+`<meta http-equiv="expires" content="text/html; chartset=utf-8">`
+>meta标签的charset的信息参数如GB2312时，代表说明网站是采用的编码是简体中文；
+>meta标签的charset的信息参数如BIG5时，代表说明网站是采用的编码是繁体中文；
+>meta标签的charset的信息参数如iso-2022-jp时，代表说明网站是采用的编码是日文；
+>meta标签的charset的信息参数如ks_c_5601时，代表说明网站是采用的编码是韩文；
+>meta标签的charset的信息参数如ISO-8859-1时，代表说明网站是采用的编码是英文；
+>meta标签的charset的信息参数如UTF-8时，代表世界通用的语言编码；
+>在 HTML5 中，有一个新的 charset 属性，它使字符集的定义更加容易：
 
-content-Type 描述文档类型，字符集
-
-<meta http-equiv="expires" content="text/html; chartset=utf-8">
-
-meta标签的charset的信息参数如GB2312时，代表说明网站是采用的编码是简体中文；
-meta标签的charset的信息参数如BIG5时，代表说明网站是采用的编码是繁体中文；
-meta标签的charset的信息参数如iso-2022-jp时，代表说明网站是采用的编码是日文；
-meta标签的charset的信息参数如ks_c_5601时，代表说明网站是采用的编码是韩文；
-meta标签的charset的信息参数如ISO-8859-1时，代表说明网站是采用的编码是英文；
-meta标签的charset的信息参数如UTF-8时，代表世界通用的语言编码；
-在 HTML5 中，有一个新的 charset 属性，它使字符集的定义更加容易：
-
-<meta charset="UTF-8">
-
+**<meta charset="UTF-8">**
 default-style规定要使用的预定义的样式表
 
-<meta http-equiv="default-style" content="the document's preferred stylesheet">
-
+**<meta http-equiv="default-style" content="the document's preferred stylesheet">**
 其中content 属性的值必须匹配同一文档中的一个 link 元素上的 title 属性的值，或者必须匹配同一文档中的一个 style 元素上的 title 属性的值
-
 expires 可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输（必须使用GMT的时间格式）
 
 <meta http-equiv="expires" content="Wed, 20-Jun-2017 22:30:00 GTM">(必须使用GMT时间格式)
