@@ -61,21 +61,8 @@ cond(no)->com
 ```
 <font color=red size=2>相关链接</font>  
 [markdown语法](https://www.appinn.com/markdown/)
+[markdown基本语法](https://www.jianshu.com/p/191d1e21f7ed)
 
-```flow
-st=>start:开始
-e=>end:结束
-com=>operation:操作
-cond=>condition:条件判断
-
-st->com->cond
-cond(yes)->e
-cond(no)->com
-```
-
-|表格title|表格title|表格title|
-|:-(左对齐)|(右对齐)-:|:-(居中对齐):|
-|表格cell|表格cell|表格cell|
 
 
 
